@@ -37,6 +37,17 @@ public class Main {
 					System.out.println("게시글이 없습니다.");
 					continue;
 				}
+//				1번게시물부터 2,3,4 순으로 정렬
+//				for(int i = 0; i<articles.size();i++) {
+//					Article article = articles.get(i);
+//				}
+//				최신게시물부터 출력
+				System.out.println("번호  |    제목");
+				for(int i = articles.size()-1; i>=0;i--) {
+					Article article = articles.get(i);
+					System.out.printf("%d    |  %s\n", article.id, article.title);
+				}
+				
 			} else {
 				System.out.printf("%s는 존재하지 않는 명령어 입니다.\n", command);
 			}
